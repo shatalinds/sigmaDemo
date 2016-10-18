@@ -1,0 +1,91 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="ru.sigmacall.sigma.AddPhoneActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_add_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/sigma_purple"
+        android:minHeight="?attr/actionBarSize">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/ui_welcome"
+            android:id="@+id/txtWelcome"
+            android:layout_gravity="center"
+            android:textColor="#fff" />
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/activity_horizontal_margin">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/txt_standart_black"
+            android:text="@string/ui_request_phone_num"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:ems="10"
+            android:id="@+id/etAddPhoneNum"
+            android:layout_gravity="center_horizontal"
+            style="@style/etLarge"
+            android:gravity="center"
+            android:layout_marginTop="32dp"
+            android:singleLine="true" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ui_accept"
+                android:id="@+id/cb_accept"
+                android:textSize="@dimen/text_caption_normal" />
+
+            <Button
+                android:id="@+id/btn_terms_link"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/ui_terms"
+                style="@style/btnLinkSmall"
+                android:layout_marginLeft="4dp"
+                android:gravity="left|center_vertical"
+                />
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ui_continue"
+            android:padding="16dp"
+            style="@style/btnLinkMedium"
+            android:id="@+id/btnAddNumContinue"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:visibility="invisible"
+            android:enabled="true" />
+
+        <!--TODO: Add terms accepting, see http://goo.gl/77wd9T -->
+
+    </LinearLayout>
+
+
+</LinearLayout>

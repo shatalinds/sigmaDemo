@@ -1,0 +1,124 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_code_confirmation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/sigma_purple"
+        android:minHeight="?attr/actionBarSize">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/toolbar_text_style_long"
+            android:text="@string/ui_code_confirmation"
+            android:id="@+id/txtCode"
+            android:layout_gravity="center"
+            android:textColor="#fff" />
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/activity_horizontal_margin">
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            style="@style/txt_standart_black"
+            android:text="@string/ui_request_code"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp">
+
+            <EditText
+                style="@style/code_digit"
+                android:id="@+id/et_code_0"
+                android:inputType="number" />
+            <EditText
+                style="@style/code_digit"
+                android:id="@+id/et_code_1"
+                android:inputType="number" />
+            <EditText
+                style="@style/code_digit"
+                android:id="@+id/et_code_2"
+                android:inputType="number" />
+            <EditText
+                style="@style/code_digit"
+                android:id="@+id/et_code_3"
+                android:layout_marginRight="0dp"
+                android:inputType="number" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:id="@+id/ll_timelimit">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/txt_standart_black"
+                android:text="@string/ui_code_valid_time"/>
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                style="@style/txt_standart_black"
+                android:id="@+id/tv_code_timer"
+                android:text="@string/time_empty"
+                android:gravity="end" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/ll_code_resend_text"
+            android:visibility="invisible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/txt_standart_black"
+                android:text="@string/ui_code_not_arrived"
+                android:layout_marginRight="4dp" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/btnLinkSmall"
+                android:text="@string/ui_code_send_again"
+                android:id="@+id/btn_send_again" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/ll_btnContinue"
+            android:visibility="visible">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ui_continue"
+            android:padding="16dp"
+            style="@style/btnLinkPromo"
+            android:id="@+id/btnConinue"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:visibility="visible"
+            android:enabled="true" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
